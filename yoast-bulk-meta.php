@@ -4,7 +4,7 @@ Plugin Name: Yoast bulk meta
 Description: 
 Author: Patrick Woodcock
 Author URI: 
-Version: 1.0.1
+Version: 1.0.2
 Requires at least: 5.0
 Tested up to: 5.2
 Requires PHP: 7.0
@@ -54,7 +54,7 @@ function yoast_bulk_meta_options_page()
 			$csv = str_getcsv($line, "\t");
 
 			if (count($csv) != 3) {
-				$results[] = "Line " . $i + 1 . " error: needs 3 columns exactly!";
+				$results[] = "Line " . ($i + 1) . " error: needs 3 columns exactly!";
 			} else {
 				$url = $csv[0];
 				
